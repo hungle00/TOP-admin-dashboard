@@ -13,31 +13,60 @@
   </head>
   <body>
     <header class="header">
-      <div class="search-container">Search</div>
-      <div class="profile-container">Profile</div>
-      <div class="welcome-container">Welcome</div>
-      <div class="btns-container">Buttons</div>
+      <div class="search-container">
+        <label class="search-icon">
+          <span class="material-icons">search</span>
+        </label>
+        <input type="text" />
+      </div>
+      <div class="profile-container">
+        <div class="notification">
+          <span class="material-icons-outlined">notifications_active</span>
+        </div>
+        <img class="avatar" src="https://i.pinimg.com/564x/f2/be/a6/f2bea637fbe89a1e3f18978895b7ab15.jpg" alt="Avatar" />
+        <h3 class="username">Hung Le</h3>
+      </div>
+      <div class="welcome-container">
+        <img class="avatar" src="https://i.pinimg.com/564x/f2/be/a6/f2bea637fbe89a1e3f18978895b7ab15.jpg" alt="Avatar" />
+        <div class="user-info">
+          <p class="greeting">Hi there, </p>
+          <h3>Hung Le (@hungle)</h3>
+        </div>
+      </div>
+      <div class="btns-container">
+        <button class="btn">New</button>
+        <button class="btn">Upload</button>
+        <button class="btn">Share</button>
+      </div>
     </header>
     <nav class="sidebar">
-      <div class="branding">Branding</div>
+      <div class="branding">
+        <p><span class="material-icons"> dashboard </span>Branding</p>
+      </div>
       <div class="links">
         <ul>
           <li>
-            <p><span class="material-icons"> home </span> Home</p>
+            <span class="material-icons">home</span>
+            <p>Home</p>
           </li>
           <li>
+            <span class="material-icons">account_box</span>
             <p>Profile</p>
           </li>
           <li>
+            <span class="material-icons">chat_bubble</span>
             <p>Messages</p>
           </li>
           <li>
+            <span class="material-icons">history</span>
             <p>History</p>
           </li>
           <li>
+            <span class="material-icons">task</span>
             <p>Tasks</p>
-            </li>
+          </li>
           <li>
+            <span class="material-icons">groups</span>
             <p>Communities</p>
           </li>
         </ul>
@@ -45,12 +74,15 @@
       <div class="settings">
         <ul>
           <li>
+            <span class="material-icons">settings</span>
             <p>Settings</p>
           </li>
           <li>
+            <span class="material-icons">help_center</span>
             <p>Support</p>
           </li>
           <li>
+            <span class="material-icons">verified_user</span>
             <p>Privacy</p>
           </li>
         </ul>

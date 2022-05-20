@@ -4,6 +4,7 @@
 
 :root {
     --sidebar-bg-color: #0ea5e9;
+    --content-bg-color: #e2e8f0;
 }
 body {
     min-height: 100vh;
@@ -16,8 +17,75 @@ body {
 .header {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
-    padding: 1.5rem 2rem;
+    grid-template: auto 1fr / 2fr 1fr;
+    padding: 0.5rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.search-container .search-icon {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.search-container input {
+    background-color: var(--content-bg-color);
+    border: none;
+    border-radius:  20px;
+    width: 80%;
+    height: 2rem;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.notification {
+  margin: 1rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-container .avatar {
+    height: 3rem;
+    width: 3rem;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-container .avatar {
+    height: 5rem;
+    width: 5rem;
+}
+
+
+.btns-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn {
+    background-color: var(--sidebar-bg-color);
+    color: white;
+    font-weight: 500;
+    padding: 0.75em 2.3em;
+    border-radius: 99em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0284c7;
 }
 
 /* ----- Sidebar ----- */
@@ -27,20 +95,47 @@ body {
     grid-template-rows: auto auto 1fr;
     background-color: var(--sidebar-bg-color);
     color: white;
-    padding: 1.5rem;
+    padding-top: 1rem;
 }
+
 .sidebar .branding {
+    padding: 4px 0px 8px 28px;
     height: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-.sidebar ul li {
+.sidebar ul li{
     list-style: none;
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 16px;
 }
+
+.sidebar ul li p {
+    display: inline;
+    margin-left: 2px;
+}
+
+@media only screen and (max-width: 960px) {
+    .sidebar {
+        padding: 1rem;
+    }
+    .sidebar .branding {
+        padding-left: 4px;
+        font-size: 1.2rem;
+    }
+    .sidebar ul {
+        padding: 0;
+    }
+   
+}
+
 
 /* ----- Content ----- */
 .content {
     display: grid;
     grid-template: auto 1fr / 2fr 1fr;
-    background-color: #e2e8f0;
+    background-color: var(--content-bg-color);
     gap: 1rem;
     padding: 1rem 2rem;
 }
