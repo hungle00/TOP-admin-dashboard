@@ -5,6 +5,7 @@
 :root {
     --sidebar-bg-color: #0ea5e9;
     --content-bg-color: #e2e8f0;
+    --content-text-color: #4b5563;
 }
 body {
     min-height: 100vh;
@@ -19,7 +20,8 @@ body {
     display: grid;
     grid-template: auto 1fr / 2fr 1fr;
     padding: 0.5rem 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px; 
 }
 .search-container .search-icon {
     vertical-align: middle;
@@ -41,7 +43,7 @@ body {
 }
 
 .notification {
-  margin: 1rem;
+    margin: 1rem;
 }
 
 .avatar {
@@ -64,6 +66,16 @@ body {
     height: 5rem;
     width: 5rem;
 }
+
+.welcome-container h3 {
+    margin-top: 0.5rem;
+}
+
+.greeting {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
 
 
 .btns-container {
@@ -140,6 +152,10 @@ body {
     padding: 1rem 2rem;
 }
 
+.content p {
+    color: var(--content-text-color);
+}
+
 .projects {
     grid-area: 1 / 1 / 3 / 2;
 }
@@ -155,7 +171,26 @@ body {
     border-radius: 0.5rem;
     background: white;
     box-shadow: 0 0 black; 
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.projects h4 h5{
+    font-size: 1.2rem;
+}
+
+.projects h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.projects p {
+    margin-top: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
 }
 
 .projects .card {
@@ -164,10 +199,32 @@ body {
 
 .announcement {
     width: 25ch;
-    padding: 1rem 0;
+    padding: 0.25rem 0;
+}
+
+.announcement + .announcement {
+    border-top: #9ca3af 1px solid;
+}
+
+.announcement h5 {
+    margin-bottom: 0;
+    margin-top: 1rem;
 }
 
 .trending {
+    display: flex;
     width: 25ch;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+}
+
+.trending .picture {
+    margin-right: 1rem;
+}
+
+.trending .avatar {
+    width: 3rem;
+}
+
+.trending h5 {
+    margin: 0;
 }
